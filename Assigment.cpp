@@ -3,10 +3,10 @@
 #include <iostream>
 #include <ctype.h>
 using namespace std;
+char ch;
 
-int evaluatePostfix(string exp)
+int Postfix(string exp)
 {
-	// Create a stack named stack
 	stack<int> stack;
 
 	// " .size  "is to indicate the size of expression to loop on it
@@ -36,6 +36,9 @@ int evaluatePostfix(string exp)
 			case '/':
 				stack.push(val2 / val1);
 				break;
+			case '^': 
+				stack.push(pow(val2, val1));
+				break;
 			}
 		}
 	}
@@ -44,9 +47,13 @@ int evaluatePostfix(string exp)
 
 int main()
 {
-	string exp;
-	cin >> exp;
-	cout << "postfix evaluation: " << evaluatePostfix(exp);
-	return 0;
+	do
+	{
+		cout << "enter a postfix  " << endl;;
+		string exp;
+		cin >> exp;
+		cout << "postfix evaluation: " << Postfix(exp) << endl;
+		cout << "do you want to continue (Y/N)" << endl;
+				cin >> ch;
+	} while (ch != 'n');
 }
-

@@ -57,3 +57,34 @@ int main()
 				cin >> ch;
 	} while (ch != 'n');
 }
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////
+ /*
+ void push(int val)
+ {
+ top++
+ stack[top]=val;
+ }
+
+
+void pop()
+{
+if(top<=-1)
+cout<<"stack underflow"<<endl;
+else{
+cout<<"the popped element is"<<stack[top]<<endl;
+top--;}
+}*/
+
+
+
+
+
